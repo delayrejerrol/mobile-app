@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="none">
+        <item android:title="@string/action_map_control">
+            <menu>
+                <item android:id="@+id/nav_map_normal_mode"
+                    android:title="@string/action_map_normal" />
+                <item android:id="@+id/nav_map_satellite_mode"
+                    android:title="@string/action_map_satellite" />
+                <item android:id="@+id/nav_map_night_mode"
+                    android:title="@string/action_map_night" />
+                <item android:id="@+id/nav_switch_panorama"
+                    android:title="@string/action_streetview_panorama"
+                    app:actionViewClass="android.support.v7.widget.SwitchCompat"/>
+                <item android:id="@+id/nav_switch_marker"
+                    android:title="@string/action_cluster_marker"
+                    app:actionViewClass="android.support.v7.widget.SwitchCompat"/>
+                <item android:id="@+id/nav_switch_polygon"
+                    android:title="@string/action_polygon"
+                    app:actionViewClass="android.support.v7.widget.SwitchCompat"/>
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="none">
+        <item android:id="@+id/nav_settings" android:title="@string/action_settings" />
+        <item android:id="@+id/nav_logout" android:title="@string/action_logout" />
+    </group>
+</menu>

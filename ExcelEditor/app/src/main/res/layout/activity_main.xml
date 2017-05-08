@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_read_excel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="READ EXCEL" />
+
+    <Button
+        android:id="@+id/btn_write_excel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WRITE EXCEL" />
+
+    <Button
+        android:id="@+id/btn_load_template"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Template"/>
+</LinearLayout>

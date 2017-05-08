@@ -1,0 +1,5 @@
+<resources>
+    <style name="CustomPopupTheme" parent="@android:style/ThemeOverlay.Material.Dark">
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+</resources>

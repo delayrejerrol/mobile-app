@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "211246123706",
+    "project_id": "map-locator-b4145"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211246123706:android:8a133fec6a609cff",
+        "android_client_info": {
+          "package_name": "com.jerrol.app.maplocator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211246123706-hnb8uku3e81r10oelhi2rb8999c4voc2.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "211246123706-0a4tg4kckj301ib35a73qniinh7vpsch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jerrol.app.maplocator",
+            "certificate_hash": "776c18a5da3c84310889742f85fe8e68032b18f7"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx0WdEWTPuXpqO0J_L9efNPXHMAzFX1Wg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
