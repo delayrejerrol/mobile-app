@@ -34,7 +34,7 @@
             <Button
                 android:id="@+id/btn_create_new_project"
                 style="@style/ButtonColored"
-                android:text="Create new project..."
+                android:text="Create new activity..."
                 android:layout_width="match_parent"
                 android:layout_height="120dp" />
 

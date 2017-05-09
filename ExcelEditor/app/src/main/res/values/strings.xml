@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Excel Editor</string>
+    <string name="file_name">File name: %s</string>
 </resources>

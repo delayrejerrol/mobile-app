@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.poi.hssf.util.HSSFColor;
@@ -29,6 +30,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Iterator;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -38,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int READ_REQUEST_CODE = 42;
     private Uri fileUri = null;
+
+    @BindView(R.id.tv_filename) TextView tvFileName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             if (cursor != null && cursor.moveToFirst()) {
                 String displayName = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
+                tvFileName.setText(String.format(getString(R.string.file_name), displayName));
                 Log.i(TAG, "Display Name: " + displayName);
 
                 int sizeIndex = cursor.getColumnIndex(OpenableColumns.SIZE);
@@ -94,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                     size = "Unknown";
                 }
                 Log.i(TAG, "Size: " + size);
+                readExcelFile(this, contentUri);
             }
         } finally {
             cursor.close();
@@ -132,7 +139,8 @@ public class MainActivity extends AppCompatActivity {
 
             //New sheet
             Sheet sheet1 = null;
-            sheet1 = wb.createSheet("myOrder");
+            //sheet1 = wb.createSheet("myOrder"); // Create new sheet
+            sheet1 = wb.getSheetAt(0); // Get Sheet
 
             //Generate column headings
             Row row = sheet1.createRow(0);
@@ -203,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
             XSSFSheet mySheet = myWorkBook.getSheetAt(0);
 
             /** We now need something to iterate through the cells.**/
-            Iterator rowIter = mySheet.rowIterator();
+            /*Iterator rowIter = mySheet.rowIterator();
 
             while(rowIter.hasNext()){
                 XSSFRow myRow = (XSSFRow) rowIter.next();
@@ -213,7 +221,23 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(TAG, "Cell Value: " +  myCell.toString());
                     Toast.makeText(context, "cell Value: " + myCell.toString(), Toast.LENGTH_SHORT).show();
                 }
-            }
+            }*/
+
+            // Get Name
+            Row row = mySheet.getRow(3);
+            Cell c = row.getCell(1);
+            String name = c.getStringCellValue();
+
+
+            // Get Project/Purpose
+            row = mySheet.getRow(4);
+            c = row.getCell(1);
+            String purpose = c.getStringCellValue();
+
+            // Get Date range
+            row = mySheet.getRow(3);
+            c = row.getCell(6);
+            String date = c.getStringCellValue();
         }catch (Exception e){e.printStackTrace(); }
 
         return;
