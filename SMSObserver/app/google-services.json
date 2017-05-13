@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "167104400450",
+    "firebase_url": "https://smsobserver.firebaseio.com",
+    "project_id": "smsobserver",
+    "storage_bucket": "smsobserver.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167104400450:android:1ada12410be4cbee",
+        "android_client_info": {
+          "package_name": "com.jerrol.app.smsobserver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167104400450-r9jj9es7l51urnaa3co1f3rhfem5teou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jerrol.app.smsobserver",
+            "certificate_hash": "0adad82edcba913d83af47a48edc4bb581f8a5b3"
+          }
+        },
+        {
+          "client_id": "167104400450-bjmnkf06pngcdumj2bg0ksoidumhqv27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDJ-7KHRoxGEbmW34uawxw-HI17P_nmQA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167104400450-bjmnkf06pngcdumj2bg0ksoidumhqv27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
